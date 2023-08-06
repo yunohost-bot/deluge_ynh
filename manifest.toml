@@ -11,7 +11,7 @@ maintainers = ["eric_G"]
 
 [upstream]
 license = "GPL-3.0-or-later"
-website = "https://dev.deluge-torrent.org/"
+website = "https://www.deluge-torrent.org/"
 admindoc = "https://deluge.readthedocs.io/en/latest/"
 code = "https://git.deluge-torrent.org/deluge"
 
