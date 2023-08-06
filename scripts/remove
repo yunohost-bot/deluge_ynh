@@ -30,6 +30,7 @@ then
 fi
 
 ynh_remove_systemd_config
+ynh_remove_systemd_config --service=${app}-web
 
 ynh_remove_nginx_config
 
