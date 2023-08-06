@@ -33,7 +33,7 @@ Deluge est un client BitTorrent léger, gratuit et multiplateforme.
 ## Documentations et ressources
 
 * Site officiel de l’app : <https://dev.deluge-torrent.org/>
-* Documentation officielle de l’admin : <https://yunohost.org/packaging_apps>
+* Documentation officielle de l’admin : <https://deluge.readthedocs.io/en/latest/>
 * Dépôt de code officiel de l’app : <https://git.deluge-torrent.org/deluge>
 * Documentation YunoHost pour cette app : <https://yunohost.org/app_deluge>
 * Signaler un bug : <https://github.com/YunoHost-Apps/deluge_ynh/issues>
