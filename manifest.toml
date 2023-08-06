@@ -12,7 +12,7 @@ maintainers = ["eric_G"]
 [upstream]
 license = "GPL-3.0-or-later"
 website = "https://dev.deluge-torrent.org/"
-admindoc = "https://yunohost.org/packaging_apps"
+admindoc = "https://deluge.readthedocs.io/en/latest/"
 code = "https://git.deluge-torrent.org/deluge"
 
 [integration]
@@ -22,7 +22,7 @@ multi_instance = false
 ldap = false
 sso = false
 disk = "50M"
-ram.build = "50M"
+ram.build = "100M"
 ram.runtime = "50M"
 
 [install]
