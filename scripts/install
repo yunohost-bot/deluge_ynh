@@ -24,6 +24,9 @@ ynh_add_systemd_config --service="${app}-web" --template="deluge-web.service"
 yunohost service add $app --description="Lightweight BitTorrent client" --log="/var/log/$app/$app.log"
 yunohost service add ${app}-web --description="BitTorrent UI" --log="/var/log/$app/$app.log"
 
+# Use logrotate to manage application logfile(s)
+ynh_use_logrotate
+
 mkdir -p /var/log/$app
 chown -R $app:$app /var/log/$app
 chmod -R 750 /var/log/$app
