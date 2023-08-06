@@ -1,0 +1,47 @@
+#!/bin/bash
+
+#=================================================
+# GENERIC START
+#=================================================
+# IMPORT GENERIC HELPERS
+#=================================================
+
+source _common.sh
+source /usr/share/yunohost/helpers
+
+#=================================================
+# SYSTEM CONFIGURATION
+#=================================================
+ynh_script_progression --message="Adding system configurations related to $app..." --weight=1
+
+# Create a dedicated NGINX config using the conf/nginx.conf template
+ynh_add_nginx_config
+
+# Create a dedicated systemd config
+ynh_add_systemd_config
+ynh_add_systemd_config --service="${app}-web" --template="deluge-web.service"
+
+yunohost service add $app --description="Lightweight BitTorrent client" --log="/var/log/$app/$app.log"
+yunohost service add ${app}-web --description="BitTorrent UI" --log="/var/log/$app/$app.log"
+
+mkdir -p /var/log/$app
+chown -R $app:$app /var/log/$app
+chmod -R 750 /var/log/$app
+
+chown -R $app:www-data "$install_dir"
+
+#=================================================
+# GENERIC FINALIZATION
+#=================================================
+# START SYSTEMD SERVICE
+#=================================================
+ynh_script_progression --message="Starting a systemd service..." --weight=1
+
+# Start a systemd service
+ynh_systemd_action --service_name=$app --action="start" --log_path="/var/log/$app/$app.log"
+ynh_systemd_action --service_name=${app}-web --action="start" --log_path="/var/log/$app/$app.log"
+
+#=================================================
+# END OF SCRIPT
+#=================================================
+ynh_script_progression --message="Installation of $app completed" --last
