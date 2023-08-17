@@ -5,7 +5,7 @@ name = "Deluge"
 description.en = "Lightweight BitTorrent client"
 description.fr = "Client BitTorrent léger"
 
-version = "2.0.3~ynh1"
+version = "2.0.3~ynh2"
 
 maintainers = ["eric_G"]
 
