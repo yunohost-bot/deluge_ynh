@@ -24,7 +24,7 @@ Deluge est un client BitTorrent léger, gratuit et multiplateforme.
 - WebUI
 - Système de plugins
 
-**Version incluse :** 2.0.3~ynh1
+**Version incluse :** 2.0.3~ynh2
 
 ## Captures d’écran
 
