@@ -34,11 +34,18 @@ ram.runtime = "50M"
     type = "path"
     default = "/deluge"
 
+    [install.init_main_permission]
+    type = "group"
+    default = "visitors"
+
 [resources]
 
     [resources.system_user]
 
     [resources.install_dir]
+
+    [resources.data_dir]
+    subdirs = ["watched", "completed"]
 
     [resources.permissions]
     main.url = "/"
