@@ -26,7 +26,7 @@ Deluge is a lightweight, Free Software, cross-platform BitTorrent client.
 
 
 
-**Shipped version:** 2.0.3~ynh2
+**Shipped version:** 2.0.3~ynh3
 
 ## Screenshots
 
