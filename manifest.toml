@@ -45,7 +45,7 @@ ram.runtime = "50M"
     [resources.install_dir]
 
     [resources.data_dir]
-    subdirs = ["watched", "completed"]
+    subdirs = ["watched", "completed", "Downloads"]
 
     [resources.permissions]
     main.url = "/"
